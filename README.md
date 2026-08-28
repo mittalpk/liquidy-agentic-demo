@@ -14,6 +14,7 @@ artifact can be created.
 
 - Gemini 3.5 through Vertex AI
 - Google GenAI SDK with typed function calls
+- Pub/Sub with an OIDC-authenticated accounting-snapshot trigger
 - Cloud Run frontend and backend
 - Cloud Build and Artifact Registry
 - Secret Manager and Cloud Logging
@@ -25,6 +26,11 @@ The showcase uses synthetic financial data. Gemini does not create ledger facts,
 perform authoritative arithmetic or authorize payments. DATEV and ISO 20022
 features are controlled subsets; this project does not claim vendor, EPC or bank
 certification, a live bank transfer, or production readiness.
+
+The Taskmaster path can start from a connector event: Pub/Sub routes a new
+synthetic accounting snapshot to forecast, risk triage, bounded Gemini planning
+and counterfactual verification. Human approval is still required for payment
+artifacts.
 
 ## Architecture
 
